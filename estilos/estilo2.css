@@ -1,0 +1,11 @@
+/***** AQUÍ VA ÚNICAMENTE LO QUE TIENEN DE DIFERENTE LAS PÁGINAS
+       QUE NO SON LA INDEX *************/
+
+header {background-image:url("../imagenes/fondo-cascos.jpg");
+        background-size: cover;
+        height:50vh;}
+/******* CONTACTO SECTION utilizando grid de 3 columnas *********/
+.grid2colmas {display:grid;
+       grid-template-columns:auto auto}
+.col2mas {padding:8%;
+   }

@@ -1,0 +1,19 @@
+/***** AQUÍ VA ÚNICAMENTE LO QUE TIENEN DE DIFERENTE LAS PÁGINAS
+       QUE NO SON LA INDEX *************/
+
+       header {background-image:url("../imagenes/cepillo-dientes-electrico-xiaomi-youpin.jpg");
+        background-size: cover;
+        height:50vh;}
+
+.grid4colmas {display:grid;
+    grid-template-columns:auto auto auto auto ;
+}
+.col4mas {padding:15px;
+    margin:10px;
+    background-color:rgb(180, 179, 196);
+    border:1px solid rgb(131, 129, 143);
+    transition:0.5s;}
+.col4mas img {width:100%;
+    transition:1s;}
+
+

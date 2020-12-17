@@ -1,0 +1,261 @@
+/* aquí se detalla el estilo de la landing page de Sistemas Informáticos */
+
+/************ FUENTES ***************/
+
+@font-face{
+       src:url('../tipografias/paraaminobenzoic.ttf');
+       font-family: rotulo;
+}
+@font-face{
+       src:url('../tipografias/Muli-Regular.ttf');
+       font-family:mitexto;
+}
+
+/*******  IFRAMES RESPONSIVE *************/
+/* aquí resuelvo la problemática de los iframes (videos,mapas, etc...)
+   incrustados en mi página  */
+.iframe-responsive {position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */}
+.iframe-content {position: absolute;
+                 top: 0;
+                 left: 0;
+                 bottom: 0;
+                 right: 0;
+                 width: 90%;
+                 height: 100%;
+        
+                }
+
+/********* LAYOUT BÁSICO ****************/
+
+body {background-image: url(../imagenes/fondo.png);
+      font-family:mitexto;
+      margin:0;}
+
+#container {background-image: url(../imagenes/fondo_container.png);
+            width:80%;  /* este será el ancho de todas las secciones */
+            margin:auto;      
+            }
+/***** flecha fija para volver al principio de la página ****/
+.fa-arrow-up {position:fixed;
+              bottom:30px;
+              right:30px;
+              color: rgba(17, 4, 4, 0.5);
+              padding:10px;
+              border-radius:5px;
+              border:1px solid rgba(17, 4, 4, 0.5);
+              z-index:99;}
+
+a {text-decoration:none;
+   color:rgb(155, 103, 35);
+   font-weight:bold;}
+a:hover {color:rgb(110, 35, 32);}
+
+button {cursor:pointer;
+        }
+
+
+/****** NAVBAR RESPONSIVE *********/
+/* Add a black background color to the top navigation */
+nav {position:sticky;
+     position:-webkit-sticky;
+     top:0;
+     z-index:99;}
+
+.topnav {
+       background-color: rgb(52, 50, 92);
+       overflow: hidden;
+     }
+     
+     /* Style the links inside the navigation bar */
+     .topnav a {
+       float: left;
+       display: block;
+       color: #b18636;
+       text-align: center;
+       padding: 10px 24px;
+       text-decoration: none;
+       font-size: 1em;
+       font-weight: bold;
+     }
+     
+     /* Change the color of links on hover */
+     .topnav a:hover {
+       background-color: #ddd;
+       color: black;
+     }
+     
+     /* Add an active class to highlight the current page */
+     /**** botón destacado que marca en que sección estoy
+           como no tenemos el js que cambia al hacer scroll
+           lo desactivamos 
+     .topnav a.active {
+       background-color: #4CAF50;
+       color: white;
+     }
+     ****/
+     
+     /* Hide the link that should open and close the topnav on small screens */
+     .topnav .icon {
+       display: none;
+     }
+
+     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 850px) {
+       .topnav a:not(:first-child) {display: none;}
+       .topnav a.icon {
+         float: right;
+         display: block;
+       }
+     }
+     
+     /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+     @media screen and (max-width: 850px) {
+       .topnav.responsive {position: relative;}
+       .topnav.responsive a.icon {
+         position: absolute;
+         right: 0;
+         top: 0;
+       }
+       .topnav.responsive a {
+         float: none;
+         display: block;
+         text-align: left;
+       }
+     }
+/****** HERO SECTION ************/            
+
+#hero {position:relative;
+       background-image:url('../imagenes/hero.jpg');
+       background-size: cover;
+       background-position: right;
+       height: 90vh; /* el alto en función de la pantalla del visitante */
+       }
+
+#hero h2 {position:absolute; /* el título debe posicionarse sobre 
+                                la foto y quedar bien contrastado:
+                                tipografia, color, contraste, y posicionamiento */
+          top:20px;
+          right:15px;
+          color:rgb(53, 55, 141);
+          font-family:rotulo;
+          font-size:2.5em;
+          text-shadow:1px 1px 1px navy;
+          background-color:rgba(209, 191, 209, 0.568);
+          padding:15px;
+          border-radius:20px 20px 10px 10px;
+          }
+
+/******** INTRO SECTION ************/
+
+#intro p { width:60%;
+           margin:60px auto;
+           text-align:justify;
+           font-size:1.5em;
+           line-height: 40px;
+           padding-bottom:20px;
+           border-bottom:2px solid rgb(64, 55, 150);}
+
+/******** HISTORIA SECTION ***********/
+#historia {background-color: rgb(116, 120, 185);
+           padding:30px;}
+#historia p {font-size:1.2em;
+             color: rgb(232, 235, 217);
+             text-align:justify;
+             line-height:35px;
+       }
+
+#tarjetaBluetooth {width:50%;
+           float:left;
+           margin-right:20px;
+           margin-bottom:20px;
+           text-align:left;}
+
+/******* FUNCION SECTION utilizando un grid de 2 columnas ******/
+.grid2col {display:grid;  /* propiedad de estilo para distribución grid */
+           grid-template-columns:50% 50%;
+}
+.col2 {
+       padding:10%;
+      margin-bottom: 47px;}
+
+       
+/******* CONTACTO SECTION utilizando grid de 3 columnas *********/
+.grid3col {display:grid;
+           grid-template-columns:auto auto 50%;}
+.col3 {padding:5%;
+       }
+
+/******** HACED LA SIGUIENTE SECCIÓN CON GRID DE 4 COLUMNAS 
+          Y LA MEDIA QUERY DE CORTE PARA TABLET, ADEMÁS DE
+          PARA MÓVIL - SERÍAN 2 MEDIA QUERIES                  *****/
+#tipos {padding:20px;
+       /* background-color:rgb(179, 216, 179);*/}
+
+.grid4col {display:grid;
+           grid-template-columns:auto auto auto auto ;
+}
+.col4 {padding:15px;
+       margin:10px;
+       background-color:rgb(133, 129, 187);
+       border:1px solid rgb(131, 129, 143);
+       border-radius:10px;
+       box-shadow:2px 2px 2px rgb(42, 27, 109);
+       transition:0.5s;}
+.col4:hover {box-shadow:2px 4px 8px grey;}
+.col4 img {width:100%;
+           border-radius:50%;
+           opacity:0.6;
+           transition:1s;}
+.col4 img:hover {opacity:1;}
+
+.col4 button {background-color:rgb(207, 111, 33);
+              padding:8px;
+              border:none;
+              color:white;
+              font-weight:bold;
+              border-radius:10px;
+              display:block;
+              margin:auto;
+              }
+.col4 button:hover {background-color:rgb(230, 138, 84);}
+
+/********* FOOTER *************/
+footer {
+        background-color:rgb(52, 50, 92) 
+        }
+
+        #contacta p {
+              color: rgb(255, 255, 255);
+        }
+        #contacta h3 {
+              color:white;
+        }
+/******* LA MEDIA QUERY ES UN IF QUE SI CUMPLE LA CONDICIÓN ******/
+/******* MODIFICA EL ESTILO APLICADO A LOS ELEMENTOS QUE INDIQUE ****/
+/******* AQUÍ TENÉIS UNA PARA ANCHO DE MÓVIL, SE PUEDEN HACER 2: *****/
+/******* UNA PARA MÓVIL Y OTRA PARA TABLET (p.ej. 1000px) ***********/ 
+
+@media only screen and (max-width:900px){
+       .grid3col {grid-template-columns: 50% 50%;
+              }
+       /* el iframe de la 3ª columna se salta el centrado.....*/
+
+       
+       .grid4col {grid-template-columns: 50% 50%;}
+}
+@media only screen and (max-width:600px){ /* tamaño de móvil */
+       #container {width:100%;}
+       #redmouse {width:100%;}
+       #intro p {text-align:left;
+                 width:80%;}
+       .grid2col{grid-template-columns: 100%;} /* modificar el grid al 100 */
+       .grid3col{grid-template-columns: 100%;}
+       .grid4col {grid-template-columns: 100%;}
+       /* .grid2col {display:block;} alternativa a lo de arriba */
+       
+
+       /****** RESPONSIVIDAD A 3 Y 4 COLUMNAS *********/
+}
