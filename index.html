@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Landing page de clase</title>
+    <!-- enlace a favicon -->
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <!-- enlace al estilo -->
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <!-- enlace a libreria jquery, en mi caso para smooth scroll-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- enlace a mis javascripts (top navbar responsive, smooth scroll -->
+    <script src="javascripts/funciones.js"></script>
+
+</head>
+<body>
+   <!-- pongo una flecha arriba con position fixed para volver arriba
+        en el estilo ver en el layout general -->
+   <a href="#hero"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+    <div id="container">
+        <nav>
+         <div class="topnav" id="myTopnav">
+            <!-- debo modificar los vinculos href para que señalen
+                 los id de mis secciones (hero,intro,historia...)-->
+            <a href="#hero" class="active">Inicio</a>
+            <a href="#intro">Bienvenida</a>
+            <a href="#historia">Historia</a>
+            <a href="#funcionamiento">Usos</a>
+            <a href="#tipos">Tipos</a>
+            <a href="#contacta">Contacta</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </nav>
+        <!-- hero section básica: una imagen de fondo y un rótulo -->
+        <section id="hero">
+        <!-- hero section con imagen de fondo fija -->
+           <h2>Bluetooth</h2>
+        </section>
+        <!-- modelo 1 de section: solo texto -->
+        <section id="intro">
+           <p>El término Bluetooth describe una tecnología de red desarrollada por el grupo de trabajo IEEE 802.15.1 del Institute of Electrical and Electronics Engineers estadounidense como estándar industrial para conexiones inalámbricas, que posibilita la transmisión de voz y datos entre diferentes dispositivos mediante un enlace por radiofrecuencia en la banda ISM de los 2.4 GHz.
+         </p>
+        </section>
+        <!-- modelo 2 de sección: foto y texto -->
+        <section id="historia">
+          
+                <img src="imagenes/bluetooth.jpeg" alt=tarjetabluetooth. Fuente:pixabay.com" id="tarjetaBluetooth">
+                
+            <p>La utilidad Bluetooth fue desarrollada, como reemplazo de cable, en 1994 por Jaap Haartsen y Mattisson Sven, que estaban trabajando para Ericsson en Lund, Suecia.​La utilidad se basa en la tecnología de saltos de frecuencia de amplio espectro. En sus inicios, la tecnología Bluetooth podía transmitir datos a una velocidad de 720 kbs, una capacidad increíble para la década de los noventa pero que hoy parece muy limitada. Después de más de dos décadas de mejoras, los diferentes tipos de Bluetooth han llegado a contar con velocidades de hasta 50Mbs. Además, el rango de conexión es otro de los aspectos que ha mejorado mucho. Bluetooth ha pasado de funcionar en distancias menores a un metro a los más de 100 metros que pueden alcanzar hoy en día. </p>
+            <p>Las prestaciones fueron publicadas por el Bluetooth Special Interest Group (SIG). El SIG las anunció formalmente el 20 de mayo de 1998. Fue creado por Ericsson, IBM, Intel, Toshiba y Nokia, y posteriormente se sumaron muchas otras compañías. Hoy cuenta con una membresía de más de 20.000 empresas en todo el mundo. Todas las versiones de los estándares de Bluetooth están diseñadas para la retro compatibilidad, que permite que el último estándar cubra todas las versiones anteriores.</p>
+            
+        </section>
+        <!-- espacio de la section divido en 2 columnas con GRID -->
+        <section id="funcionamiento" class="grid2col">
+           <div class="col2" id="izqda">
+                <div class="iframe-responsive"><!-- necesario para responsividad del iframe interior-->
+                    <iframe class="iframe-content" src="https://www.youtube.com/embed/qNsk9QhNHfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- al pegar el iframe, hay que quitar width y height 
+                 y a cambio, poner clase "iframe-content"-->
+                </div>
+           </div>
+           <div class="col2" id="dcha">
+            <p>Los dispositivos que con mayor frecuencia utilizan esta tecnología pertenecen a sectores de las telecomunicaciones y la informática personal, como teléfonos móviles, computadoras portátiles, computadoras personales, impresoras, altavoces inalámbricos, auriculares inalámbricos o semi inalámbricos o cámaras digitales. <a href="https://es.wikipedia.org/wiki/Bluetooth" target="_blank">Bluetooth</a> </p>
+            <p> Los principales objetivos que se pretenden conseguir con esta tecnología son:</p>
+            <p>- Facilitar las comunicaciones entre equipos móviles.</p>
+            <p>- Eliminar los cables y conectores entre estos.</p>
+            <p>- Ofrecer la posibilidad de crear pequeñas redes inalámbricas y facilitar la sincronización de datos entre equipos personales.</p>
+
+           </div>
+        </section>
+        <!-- section con grid a 3 columnas -->
+        <section id="contacto" class="grid3col">
+           <div class="col3">
+            La especificación de Bluetooth define un canal de comunicación a un máximo de 720 kbit/s con rango óptimo de 10 m. Opera en la frecuencia de radio de 2,4 a 2,48 GHz con amplio espectro y saltos de frecuencia con posibilidad de transmitir en Full Duplex con un máximo de 1600 saltos por segundo. Los saltos de frecuencia se dan entre un total de 79 frecuencias con intervalos de 1 MHz; esto permite dar seguridad y robustez.
+
+           </div>
+           <div class="col3">
+            Bluetooth Special Interest Group (Bluetooth SIG) es una asociación privada sin ánimo de lucro con sede en Kirkland, Washington. A fecha de septiembre de 2007, el SIG estaba formado por más de 9000 compañías de telecomunicaciones, informática, automovilismo, música, textil, automatización industrial y tecnologías de red. Tiene pequeños grupos de personal dedicado al grupo en Hong Kong, Suecia y Estados Unidos. Los miembros del SIG dirigen el desarrollo de la tecnología inalámbrica Bluetooth, además de implementar y comercializar la tecnología en sus productos. El Bluetooth SIG por sí mismo no fabrica ni vende dispositivos Bluetooth.
+            
+           </div>
+           <div class="col3 iframe-responsive"><!-- 2 clases simultáneas-->
+             <!-- la primera es por el grid, la segunda por el contenedor
+                  iframe -->
+            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85940.70705781442!2d-122.2757050349068!3d47.691273189844544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549012c02852ce7b%3A0x7a776aaa70782857!2sKirkland%2C%20Washington%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1607872140244!5m2!1ses!2ses" class="iframe-content" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <!-- al pegar el iframe, hay que quitar width y height 
+                 y a cambio, poner clase "iframe-content"-->
+           </div>
+        </section>
+        <section id="tipos" class="grid4col">
+           <div class="col4">
+              <img src="https://i.blogs.es/247568/sony1000xtactil/450_1000.jpg" alt="">
+              <p>En esta sección encontraras un resumen del funcionamiento de los cascos inalambricos por bluetooth además de un resumen de precios de los mas comunes.</p>
+              <button onclick="window.location.href='masinfo.html'">Leer más</button>
+           </div>
+           <div class="col4">
+               <img src="https://i.blogs.es/477c2a/bluetooth/450_1000.png" alt="">
+            <p>En esta sección entontrarás otros dispositivos desde ratones y teclados hasta algunas cosas mas locas</p>
+            <button onclick="window.location.href='masinfo1.html'">Leer más</button>
+           </div>
+           <div class="col4">
+            <img src="https://i.blogs.es/2a6f3a/bluetooth/450_1000.jpg" alt="">
+            <p>Aqui encontraras de donde surgio el tan conocido icono del bluetooth, una tecnolologia moderna con un icono no tan reciente...</p>
+            <button onclick="window.location.href='masinfo2.html'">Leer más</button>
+           </div>
+           <div class="col4">
+            <img src="https://www.comunicacionesinalambricashoy.com/imagenes/2019/10/Dialog-DA14531.jpg" alt="">
+            <p>El bluetooth de baja energía, qué es y porque se piensa que va a tener un gran impacto en un futuro próximo, asi como de las investigaciones actuales.</p>
+            <button onclick="window.location.href='masinfo3.html'">Leer más</button>
+           </div>
+        </section>
+        
+        <footer id ="contacta" class="grid3col">
+           <!-- Contacto -->
+           <div class="col3">
+              <h3>Contáctame:</h3>
+              <p>Teléfono: 669005713</p>
+              <p>Email: pablo.reyes.alu@iescampanillas.com</p>
+           </div>
+           <!-- enlaces de barra de navegación repetidos -->
+           <div class="col3">
+            <h3>Contenido:</h3>
+            <a href="#hero" class="active">Inicio</a><br>
+            <a href="#intro">Bienvenida</a><br>
+            <a href="#historia">Historia</a><br>
+            <a href="#funcionamiento">Usos</a><br>
+            <a href="#tipos">Tipos</a></p>
+           </div>
+        </footer>
+    </div>
+
+    
+</body>
+</html>
