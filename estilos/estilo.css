@@ -42,10 +42,11 @@ body {background-image: url(../imagenes/fondo.png);
 .fa-arrow-up {position:fixed;
               bottom:30px;
               right:30px;
-              color: rgba(17, 4, 4, 0.5);
+              color: rgb(155, 103, 35);
               padding:10px;
+              font-size: 3em;
               border-radius:5px;
-              border:1px solid rgba(17, 4, 4, 0.5);
+              background-color: rgb(52, 50, 92);
               z-index:99;}
 
 a {text-decoration:none;
